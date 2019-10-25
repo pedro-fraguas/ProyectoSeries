@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  }
+
+  body {
+    background-color: black;
+  }
+
+  main {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  div.infoPrincipal {
+    display: flex;
+  }
+
+  img.poster {
+    width: 30%;
+  }
+
+  h3.tituloPelicula {
+    top: 0;
+    left: 35%;
+  }
+
+  h4.datosPrincipales {
+    top: 70px;
+    left: 35%;
+  }
+
+  div.infogeneral {
+    display: flex;
+  }
+
+  p.descripcion {
+    top: 200vh;
+  }
+
+  iframe.trailer {
+    top: 300px;
+  }
