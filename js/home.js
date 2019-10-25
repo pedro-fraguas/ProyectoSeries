@@ -6,7 +6,7 @@ window.onload = function() {
     .then(function(data) {
       var series = data.results;
 
-      var imagenes = document.querySelectorAll(".serie-popular");
+      var imagenes = document.querySelectorAll(".serie-popular img");
 
       for (var i = 0; i < imagenes.length; i++) {
         imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;

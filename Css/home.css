@@ -55,3 +55,20 @@ nav ul.header-right i{
 nav ul.header-right li{
 visibility: hidden;
 }
+
+main section.series-populares div{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main article.serie-popular img{
+  width: 100%;
+}
+
+main article.serie-popular {
+  width: 20%;
+}
+
+main article.serie-popular.hover p{
+  opacity: 1;
+}
