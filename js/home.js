@@ -7,9 +7,11 @@ window.onload = function() {
       var series = data.results;
 
       var imagenes = document.querySelectorAll(".popular img");
+      var titulos = document.querySelectorAll(".popular p");
 
       for (var i = 0; i < imagenes.length; i++) {
         imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+        titulos[i].innerHTML = series[i].name;
       }
     })
     .catch(function(error) {
@@ -24,9 +26,11 @@ window.onload = function() {
       var series = data.results;
 
       var imagenes = document.querySelectorAll(".puntaje img");
+      var titulos = document.querySelectorAll(".puntaje p");
 
       for (var i = 0; i < imagenes.length; i++) {
         imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+        titulos[i].innerHTML = series[i].name;
       }
     })
     .catch(function(error) {
@@ -41,9 +45,11 @@ window.onload = function() {
       var series = data.results;
 
       var imagenes = document.querySelectorAll(".aire img");
+      var titulos = document.querySelectorAll(".aire p");
 
       for (var i = 0; i < imagenes.length; i++) {
         imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+        titulos[i].innerHTML = series[i].name;
       }
     })
     .catch(function(error) {
