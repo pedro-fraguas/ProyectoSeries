@@ -62,38 +62,3 @@ nav ul.header-right i{
 nav ul.header-right li{
 visibility: hidden;
 }
-
-/* Main Body */
-
-main{
-  font-family: 'Poiret One', cursive;
-}
-
-main section.series div{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-main article.serie {
-  width: 18%;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-main article.serie img{
-  width: 100%;
-  transition: .3s;
-}
-
-main article.serie p{
-  opacity: 0;
-  transition: .3s;
-}
-
-main article.serie img:hover{
-  opacity: 0.5;
-}
-
-main article.serie:hover p{
-  opacity: 1;
-}
