@@ -1,4 +1,13 @@
 window.onload = function() {
+
+  /* Header search
+  searchBar = document.querySelector(".fas fa-search")
+
+  searchBar.onclick = function (){
+
+    document.querySelector("li.searchBar").style.visibility = "show"
+  }
+  */
   fetch("https://api.themoviedb.org/3/tv/popular?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&page=1")
     .then(function(response) {
       return response.json();

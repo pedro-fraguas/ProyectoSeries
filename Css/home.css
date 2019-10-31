@@ -59,7 +59,7 @@ nav ul.header-right i{
 
 }
 
-nav ul.header-right li{
+nav ul.header-right li.searchBar{
 visibility: hidden;
 }
 
