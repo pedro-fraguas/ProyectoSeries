@@ -6,6 +6,7 @@
   font-family: 'Poiret One', cursive;
   }
 
+  /* body */
   body {
     background-color: white;
   }
@@ -19,7 +20,7 @@
     display: flex;
   }
 
-  img.poster {
+  img.portada {
     width: 30%;
     margin-top: 15px;
   }
@@ -55,7 +56,29 @@
   div.tituloDatos {
     width: 100%;
   }
-  *{box-sizing: border-box;}
+
+  div.carrousel {
+    display: flex;
+  }
+
+  img.poster {
+    width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  div.relacionadas h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+
+
+
+
+
+
+
 
   /* Header */
 
