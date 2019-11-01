@@ -1,4 +1,5 @@
 *{box-sizing: border-box;}
+
 /* Header */
 
 header nav{
@@ -60,7 +61,12 @@ nav ul.header-right i{
 }
 
 nav ul.header-right li{
-visibility: hidden;
+visibility: visible;
+}
+
+nav ul.header-right button{
+  background-color: rgb(129, 133, 138);
+  border: none;
 }
 
 /* Main Body */
