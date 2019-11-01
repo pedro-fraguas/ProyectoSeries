@@ -2,7 +2,8 @@ window.onload = function() {
   var datos = new URLSearchParams(location.search);
   var loBuscado = datos.get("buscador");
 
-  fetch("https://api.giphy.com/v1/gifs/search?api_key=lp7wQ6914aPRmDI6HePRPpQeZXyxLFkU&q=" + loBuscado + "&limit=25&offset=0&rating=G&lang=en")
+  fetch("https://api.themoviedb.org/3/search/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&query="
+  + loBuscado +"&page=1")
   .then(function(response) {
     return response.json();
   })
