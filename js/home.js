@@ -8,10 +8,12 @@ window.onload = function() {
 
       var imagenes = document.querySelectorAll(".popular img");
       var titulos = document.querySelectorAll(".popular p");
+      var hipervinculos = document.querySelectorAll(".popular a");
 
       for (var i = 0; i < imagenes.length; i++) {
         imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
         titulos[i].innerHTML = series[i].name;
+        hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }
     })
     .catch(function(error) {
