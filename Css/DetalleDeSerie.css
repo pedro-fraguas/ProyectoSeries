@@ -2,11 +2,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: white;
+  color: black;
+  font-family: 'Poiret One', cursive;
   }
 
   body {
-    background-color: black;
+    background-color: white;
   }
 
   main {
@@ -20,16 +21,21 @@
 
   img.poster {
     width: 30%;
+    margin-top: 15px;
   }
 
   h3.tituloPelicula {
     top: 0;
     left: 35%;
+    margin-left: 15%;
+    margin-top: 15px;
   }
 
   h4.datosPrincipales {
     top: 70px;
     left: 35%;
+    margin-left: 15%;
+    margin-top: 5px;
   }
 
   div.infogeneral {
@@ -38,12 +44,17 @@
 
   p.descripcion {
     top: 200vh;
+    margin-top: 20px;
   }
 
   iframe.trailer {
     top: 300px;
+    margin-top: 30px;
   }
 
+  div.tituloDatos {
+    width: 100%;
+  }
   *{box-sizing: border-box;}
 
   /* Header */
