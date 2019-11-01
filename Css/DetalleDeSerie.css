@@ -141,5 +141,10 @@
   }
 
   nav ul.header-right li{
-  visibility: hidden;
+  visibility: visible;
+  }
+
+  nav ul.header-right button{
+    background-color: rgb(129, 133, 138);
+    border: none;
   }
