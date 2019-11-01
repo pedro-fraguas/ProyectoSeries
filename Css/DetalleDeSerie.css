@@ -20,7 +20,7 @@
     display: flex;
   }
 
-  img.portada {
+  img.poster {
     width: 30%;
     margin-top: 15px;
   }
@@ -61,7 +61,7 @@
     display: flex;
   }
 
-  img.poster {
+  img.portada {
     width: 90%;
     justify-content: space-between;
     margin: 0 auto;
