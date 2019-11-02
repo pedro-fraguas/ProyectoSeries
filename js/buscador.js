@@ -8,9 +8,10 @@ window.onload = function() {
     return response.json();
   })
   .then(function(respuesta) {
-    var gifs = respuesta.data;
-    for (var i = 0; i < gifs.length; i++) {
-      document.querySelector("ul").innerHTML += "<li><h3><a href=detalleGif.html?idGif=" + respuesta.data[i].id + ">" + respuesta.data[i].title + "</a></h3><img src=" + respuesta.data[i].images.original.url + "></li>";
+    var series = respuesta.data;
+    for (var i = 0; i < 5; i++) {
+      document.querySelector("h1").innerHTML = "Esto encontramos para tu busqueda de " + loBuscado + ":" 
+      document.querySelector("h1").innerHTML = "<li><h3><a href=detalleGif.html?idGif=" + respuesta.data[i].id + ">" + respuesta.data[i].title + "</a></h3><img src=" + respuesta.data[i].images.original.url + "></li>";
     }
   })
   .catch(function(error) {
