@@ -67,6 +67,16 @@ nav ul.header-right button{
   background-color: rgb(129, 133, 138);
   border: none;
 }
+/* BODY */
+
+body{
+  margin: 0;
+}
+
+body main{
+  margin-left: 2%;
+  margin-right: 2%;
+}
 
 /* FOOTER */
 
