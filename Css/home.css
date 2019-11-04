@@ -105,3 +105,29 @@ main article.serie:hover p{
 }
 
 /* FOOTER */
+
+footer{
+  font-family: 'Poiret One', cursive;
+  background-color: rgb(129, 133, 138);
+  margin-top: 20px;
+  padding: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 200px;
+}
+
+footer div.footer-izq{
+  width: 40%;
+  margin-left: 5%;
+}
+
+footer div.footer-der{
+    width: 40%;
+    margin-right: 5%;
+}
+
+footer div.footer-izq a{
+  text-decoration: none;
+  color: white;
+}

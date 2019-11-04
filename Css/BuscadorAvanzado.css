@@ -67,3 +67,31 @@ nav ul.header-right button{
   background-color: rgb(129, 133, 138);
   border: none;
 }
+
+/* FOOTER */
+
+footer{
+  font-family: 'Poiret One', cursive;
+  background-color: rgb(129, 133, 138);
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1px;
+  height: 200px;
+}
+
+footer div.footer-izq{
+  width: 40%;
+  margin-left: 5%;
+}
+
+footer div.footer-der{
+    width: 40%;
+    margin-right: 5%;
+}
+
+footer div.footer-izq a{
+  text-decoration: none;
+  color: white;
+}

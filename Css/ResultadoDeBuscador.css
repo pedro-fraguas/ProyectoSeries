@@ -74,31 +74,59 @@ main{
   font-family: 'Poiret One', cursive;
 }
 
-main section.series div{
+main section.series div.resultados{
   display: flex;
   flex-wrap: wrap;
 }
 
-main article.serie {
+main article.serieBuscada {
   width: 18%;
   justify-content: space-between;
   margin: 0 auto;
 }
 
-main article.serie img{
+main article.serieBuscada img{
   width: 100%;
   transition: .3s;
 }
 
-main article.serie p{
+main article.serieBuscada p{
   opacity: 0;
   transition: .3s;
 }
 
-main article.serie img:hover{
+main article.serieBuscada img:hover{
   opacity: 0.5;
 }
 
-main article.serie:hover p{
+main article.serieBuscada:hover p{
   opacity: 1;
+}
+
+/* FOOTER */
+
+footer{
+  font-family: 'Poiret One', cursive;
+  background-color: rgb(129, 133, 138);
+  margin-top: 20px;
+  padding: 1px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+footer div.footer-izq{
+  width: 40%;
+  margin-left: 5%;
+}
+
+footer div.footer-der{
+    width: 40%;
+    margin-right: 5%;
+}
+
+footer div.footer-izq a{
+  text-decoration: none;
+  color: white;
 }
