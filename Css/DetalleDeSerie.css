@@ -25,7 +25,7 @@
     margin-top: 15px;
   }
 
-  h3.tituloPelicula {
+  h2.tituloPelicula {
     top: 0;
     left: 35%;
     margin-left: 2%;
@@ -33,6 +33,13 @@
   }
 
   h4.datosPrincipales {
+    top: 70px;
+    left: 35%;
+    margin-left: 2%;
+    margin-top: 5px;
+  }
+
+  .tituloDatos p {
     top: 70px;
     left: 35%;
     margin-left: 2%;
