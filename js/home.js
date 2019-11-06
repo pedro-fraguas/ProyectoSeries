@@ -6,14 +6,14 @@ window.onload = function() {
     .then(function(data) {
       var series = data.results;
 
-      var imagenes = document.querySelectorAll(".uk-slider-items li img");
-      var titulos = document.querySelectorAll(".uk-slider-items li div h1");
-      // var hipervinculos = document.querySelectorAll(".popular a");
+      var imagenes = document.querySelectorAll(".populares .uk-slider-items li img");
+      var titulos = document.querySelectorAll(".populares .uk-slider-items li div h1");
+      var hipervinculos = document.querySelectorAll(".populares .uk-slider-items li a");
 
       for (var i = 0; i < imagenes.length; i++) {
         imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
         titulos[i].innerHTML = series[i].name;
-        // hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
+        hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }
     })
     .catch(function(error) {

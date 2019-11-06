@@ -2,19 +2,21 @@ window.onload = function() {
   var datos = new URLSearchParams(location.search);
   var loBuscado = datos.get("buscador");
 
-  fetch("https://api.themoviedb.org/3/search/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&page=1")
+  fetch("https://api.themoviedb.org/3/search/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&query=" + loBuscado + "&page=1")
   .then(function(response) {
     return response.json();
   })
-  .then(function(respuesta) {
-    var series = respuesta.data;
+  .then(function(data) {
+    var series = data.results;
 
-    var imagenes = document.querySelectorAll(".serieBuscada img");
+    var imagenes = document.querySelectorAll(".serieBuscada a img");
+    var hipervinculos = document.querySelectorAll(".serieBuscada a");
 
+    document.querySelector("h1").innerHTML = "Esto encontramos para tu busqueda de '" + loBuscado + "':"
 
-    for (var i = 0; i < 5; i++) {
-      document.querySelector("h1").innerHTML = "Esto encontramos para tu busqueda de " + loBuscado + ":"
-      serieBuscada[i].src = "https://api.themoviedb.org/3/search/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&query="+ loBuscado +"&page=1";
+    for (var i = 0; i < imagenes.length; i++) {
+      imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+      hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
     }
   })
   .catch(function(error) {
