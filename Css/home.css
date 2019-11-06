@@ -13,7 +13,7 @@ header nav{
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 60px;
+  height: 70px;
   background-color: rgb(129, 133, 138);
   padding: 0;
   margin: 0;
@@ -26,6 +26,7 @@ nav ul.header-left{
     list-style: none;
     padding-left: 0;
     margin-left: 0;
+    padding-top: 15px;
 }
 
 nav ul.header-left li.menu{
@@ -80,6 +81,10 @@ nav ul.header-right button{
 
 main{
   font-family: 'Poiret One', cursive;
+}
+
+h3{
+    font-family: 'Poiret One', cursive;
 }
 
 main section.series div{
