@@ -103,6 +103,10 @@ main article.serieBuscada:hover p{
   opacity: 1;
 }
 
+main button{
+  visibility: visible;
+}
+
 /* FOOTER */
 
 footer{
