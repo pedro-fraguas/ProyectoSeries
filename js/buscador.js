@@ -28,7 +28,6 @@ window.onload = function() {
   }
 
   var verMas = document.querySelector("main button");
-
   verMas.onclick = function() {
     var resultados = document.querySelector("div.resultados");
     resultados.innerHTML += "<article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article>";
@@ -37,5 +36,15 @@ window.onload = function() {
       verMas.style.visibility = "hidden";
     }
   }
+
+  // var barraBuscador = document.querySelector("header form.buscador input");
+  // barraBuscador.onsubmit = function() {
+  //   if (this.value == "") {
+  //     event.preventDefault();
+  //   } else if (this.value.length < 3) {
+  //     event.preventDefault();
+  //     alert("La busqueda debe tener al menos 3 letras");
+  //   }
+  // }
 
 }
