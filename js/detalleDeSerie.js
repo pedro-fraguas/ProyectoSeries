@@ -17,8 +17,28 @@ window.onload = function() {
       for (var i = 0; i < serie.genres.length; i++) {
         generos.innerHTML += "<a href=''>"+ serie.genres[i].name +"</a><br>";
       }
+
     })
     .catch(function(error) {
+      alert("Error");
+    })
+
+  fetch("https://api.themoviedb.org/3/tv/" + serieID + "/similar?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&page=1")
+    .then(function(response){
+      return response.json();
+    })
+    .then(function(data){
+      var relacionadas = data.results;
+
+      var imagenes = document.querySelectorAll(".relacionadas .uk-slider-items li img");
+      var hipervinculos = document.querySelectorAll(".relacionadas .uk-slider-items li a");
+
+      for (var i = 0; i < imagenes.length; i++) {
+        imagenes[i].src = "https://image.tmdb.org/t/p/original" + relacionadas[i].poster_path;
+        hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + relacionadas[i].id;
+      }
+    })
+    .catch(function(error){
       alert("Error");
     })
 }

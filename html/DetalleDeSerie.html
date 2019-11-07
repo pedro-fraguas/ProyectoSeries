@@ -7,6 +7,13 @@
     <script src="../js/detalleDeSerie.js" charset="utf-8"></script>
     <script src="https://kit.fontawesome.com/4cbe2a5007.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+
   </head>
   <body>
     <header>
@@ -39,29 +46,44 @@
         </div>
       </div>
       <div class="relacionadas">
-          <h3>Relacionadas</h3>
-          <div class="carrousel">
-            <article class="serieRelacionada">
-              <p></p>
-              <a href="DetalleDeSerie.html"><img class="portada" src="https://image.tmdb.org/t/p/original/gKG5QGz5Ngf8fgWpBsWtlg5L2SF.jpg" alt=""></a>
-            </article>
-            <article class="serieRelacionada">
-              <p></p>
-              <a href="DetalleDeSerie.html"><img class="portada" src="https://image.tmdb.org/t/p/original/gKG5QGz5Ngf8fgWpBsWtlg5L2SF.jpg" alt=""></a>
-            </article>
-            <article class="serieRelacionada">
-              <p></p>
-              <a href="DetalleDeSerie.html"><img class="portada" src="https://image.tmdb.org/t/p/original/gKG5QGz5Ngf8fgWpBsWtlg5L2SF.jpg" alt=""></a>
-            </article>
-            <article class="serieRelacionada">
-              <p></p>
-              <a href="DetalleDeSerie.html"><img class="portada" src="https://image.tmdb.org/t/p/original/gKG5QGz5Ngf8fgWpBsWtlg5L2SF.jpg" alt=""></a>
-            </article>
-            <article class="serieRelacionada">
-              <p></p>
-              <a href="DetalleDeSerie.html"><img class="portada" src="https://image.tmdb.org/t/p/original/gKG5QGz5Ngf8fgWpBsWtlg5L2SF.jpg" alt=""></a>
-            </article>
-          </div>
+        <h3>Relacionadas</h3>
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
+          <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-5@m">
+            <li class="uk-transition-toggle" tabindex="0">
+              <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="uk-transition-toggle" tabindex="0">
+              <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="uk-transition-toggle" tabindex="0">
+              <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="uk-transition-toggle" tabindex="0">
+              <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="uk-transition-toggle" tabindex="0">
+              <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="uk-transition-toggle" tabindex="0">
+              <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="uk-transition-toggle" tabindex="0">
+              <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="uk-transition-toggle" tabindex="0">
+              <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="uk-transition-toggle" tabindex="0">
+              <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="uk-transition-toggle" tabindex="0">
+              <a href="#"><img src="" alt=""></a>
+            </li>
+          </ul>
+
+          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+        </div>
       </div>
 
     </main>
