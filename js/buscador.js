@@ -27,6 +27,7 @@ window.onload = function() {
     }
   }
 
+  //se puede hacer el scroll infinito con un evento .onscroll
   var verMas = document.querySelector("main button");
   verMas.onclick = function() {
     var resultados = document.querySelector("div.resultados");
