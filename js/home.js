@@ -7,12 +7,10 @@ window.onload = function() {
       var series = data.results;
 
       var imagenes = document.querySelectorAll(".populares .uk-slider-items li img");
-      var titulos = document.querySelectorAll(".populares .uk-slider-items li div h1");
       var hipervinculos = document.querySelectorAll(".populares .uk-slider-items li a");
 
       for (var i = 0; i < imagenes.length; i++) {
         imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
-        titulos[i].innerHTML = series[i].name;
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }
     })
@@ -27,13 +25,11 @@ window.onload = function() {
     .then(function(data) {
       var series = data.results;
 
-      var imagenes = document.querySelectorAll(".puntaje img");
-      var titulos = document.querySelectorAll(".puntaje p");
-      var hipervinculos = document.querySelectorAll(".puntaje a");
+      var imagenes = document.querySelectorAll(".puntaje .uk-slider-items li img");
+      var hipervinculos = document.querySelectorAll(".puntaje .uk-slider-items li a");
 
       for (var i = 0; i < imagenes.length; i++) {
         imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
-        titulos[i].innerHTML = series[i].name;
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }
     })
@@ -48,13 +44,11 @@ window.onload = function() {
     .then(function(data) {
       var series = data.results;
 
-      var imagenes = document.querySelectorAll(".aire img");
-      var titulos = document.querySelectorAll(".aire p");
-      var hipervinculos = document.querySelectorAll(".aire a");
+      var imagenes = document.querySelectorAll(".al-aire .uk-slider-items li img");
+      var hipervinculos = document.querySelectorAll(".al-aire .uk-slider-items li a");
 
       for (var i = 0; i < imagenes.length; i++) {
         imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
-        titulos[i].innerHTML = series[i].name;
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }
     })
