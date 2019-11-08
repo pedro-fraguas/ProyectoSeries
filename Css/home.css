@@ -3,6 +3,7 @@
 
 body{
   margin-top: 0;
+  
 }
 
 body main{
@@ -81,6 +82,7 @@ nav ul.header-right button{
 
 main{
   font-family: 'Poiret One', cursive;
+    color: white;
 }
 
 h3{
