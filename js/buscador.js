@@ -3,6 +3,8 @@ window.onload = function() {
   var loBuscado = datos.get("buscador");
   var series;
   var imagenes;
+  var contador = 1;
+  var totalDeSeries;
 
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
     .then(function(response) {
@@ -26,6 +28,7 @@ window.onload = function() {
       return response.json();
     })
     .then(function(data) {
+      totalDeSeries = data.total_results;
       series = data.results;
       document.querySelector("h1").innerHTML = "Esto encontramos para tu busqueda de '" + loBuscado + "':"
       cargarSeries(series);
@@ -45,14 +48,47 @@ window.onload = function() {
   }
 
   //se puede hacer el scroll infinito con un evento .onscroll
+
+  // var verMas = document.querySelector("main button");
+  // verMas.onclick = function() {
+  //   var resultados = document.querySelector("div.resultados");
+  //   resultados.innerHTML += "<article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article>";
+  //   cargarSeries(series);
+  //   if (imagenes.length >= series.length) {
+  //     verMas.style.visibility = "hidden";
+  //   }
+  // }
+
   var verMas = document.querySelector("main button");
   verMas.onclick = function() {
     var resultados = document.querySelector("div.resultados");
-    resultados.innerHTML += "<article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article>";
-    cargarSeries(series);
-    if (imagenes.length >= series.length) {
+    resultados.innerHTML += "<article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article>";
+    contador++;
+    cargarMasSeries(series);
+
+    if (imagenes.length >= totalDeSeries) {
       verMas.style.visibility = "hidden";
     }
+  }
+
+  function cargarMasSeries(series) {
+    imagenes = document.querySelectorAll(".serieBuscada a img");
+    var hipervinculos = document.querySelectorAll(".serieBuscada a");
+
+    fetch("https://api.themoviedb.org/3/search/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&query=" + loBuscado + "&page=" + contador)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        series = data.results;
+        for (var i = (contador - 1) * 20; i < imagenes.length; i++) {
+          imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i - (contador - 1) * 20].poster_path;
+          hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i - (contador - 1) * 20].id;
+        }
+      })
+      .catch(function(error) {
+        alert("Error");
+      })
   }
 
   // var barraBuscador = document.querySelector("header form.buscador input");
