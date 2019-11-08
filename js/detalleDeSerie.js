@@ -32,7 +32,7 @@ window.onload = function() {
 
       var generos = document.querySelector(".tituloDatos p.generos");
       for (var i = 0; i < serie.genres.length; i++) {
-        generos.innerHTML += "<a href=''>"+ serie.genres[i].name +"</a><br>";
+        generos.innerHTML += "<a href='SeriesPorGenero.html?idGenero=" + serie.genres[i].id + "'>" + serie.genres[i].name +"</a><br>";
       }
 
     })
