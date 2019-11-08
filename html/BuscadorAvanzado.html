@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="../css/BuscadorAvanzado.css">
-    <script src="../js/home.js" charset="utf-8"></script>
+    <script src="../js/buscadorAvanzado.js" charset="utf-8"></script>
     <script src="https://kit.fontawesome.com/4cbe2a5007.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
 
@@ -80,30 +80,60 @@
     </header>
     <main>
       <h1>Buscador avanzado</h1>
-      <form class="" action="index.html" method="post">
+      <form class="" action="ResultadosBuscadorAvanzado.html" method="get">
         <label for="">¿Qué género estás buscando?</label>
-        <select>
+        <select class="generos" name="generoincluido">
           <option value="" disabled selected>Generos</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
+          <option value="" class="genero"></option>
         </select>
         <label for="">¿Qué género queres excluir?</label>
-        <select>
+        <select class="generos2" name="generoexcluido">
           <option value="" disabled selected>Generos</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
+          <option value="" class="genero2"></option>
         </select>
         <label for="">¿Qué año de estreno buscas?</label>
-        <input type="text" name="" value="" placeholder="Año de estreno">
+        <input type="text" name="añoestreno" value="" placeholder="Año de estreno">
         <label for="">¿Cómo queres ver los resulltados?</label>
-        <select>
+        <select name="ordenresultados">
           <option value="" disabled selected>Orden de resultados</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
+          <option value="">vote_average.desc</option>
+          <option value="">vote_average.asc</option>
+          <option value="">first_air_date.desc</option>
+          <option value="">first_air_date.asc</option>
+          <option value="">popularity.desc</option>
+          <option value="">popularity.asc</option>
         </select>
-        <button type="submit" name="button">Buscar!</button>
+        <button type="submit" name="button" >Buscar!</button>
       </form>
     </main>
     <footer>

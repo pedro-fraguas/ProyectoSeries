@@ -1,0 +1,18 @@
+window.onload = function(){
+  var datos = new URLSearchParams(location.search)
+  var generoincluido = datos.get("generoincluido")
+  var generoexcluido = datos.get("generoexcluido")
+  var año = datos.get("añoestreno")
+  var mostrar = datos.get("ordenresultados")
+
+
+  fetch("https://api.themoviedb.org/3/discover/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&sort_by="+ mostrar +"&first_air_date_year="+ año +"&page=1&with_genres="+ generoincluido +"&without_genres="+ generoexcluido +")
+    .then(function(response) {
+      return response.json();
+    })
+
+
+
+
+
+}
