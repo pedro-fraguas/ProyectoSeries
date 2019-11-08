@@ -3,27 +3,78 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/ListadoDeGeneros.css">
-    <script src="../js/home.js" charset="utf-8"></script>
     <script src="https://kit.fontawesome.com/4cbe2a5007.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
     <script src="../js/ListadoDeGeneros.js" charset="utf-8"></script>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+
     <title></title>
   </head>
   <body>
     <header>
-      <nav>
-        <ul class="header-left">
-          <li class="logo"><img src="../img/LogoProyecto.png" alt=""></li>
-          <li class="menu"><a href="home.html">Inicio</a></li>
-          <li class="generos"><a href="SeriesPorGenero.html">Generos</a></li>
-          <li class="menu"><a href="#">Favoritos</a></li>
-        </ul>
-        <ul class="header-right">
-          <form class="buscador" action="ResultadoDeBuscador.html" method="get">
-            <input type="text" name="buscador" placeholder="Encontra tu serie favorita!"></li>
-            <button type="submit" name="lupita"><i class="fas fa-search"></i></button>
-          </form>
-        </ul>
+      <nav class="uk-navbar-container uk-margin" uk-navbar>
+        <div class="uk-navbar-left">
+
+          <a class="uk-navbar-item uk-logo" href="home.html"><img src="../img/LogoProyecto.png" alt=""></a>
+
+          <ul class="uk-navbar-nav">
+            <li>
+              <a href="#">
+              <span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
+                Favoritos
+              </a>
+            </li>
+            <li>
+              <a href="#">Generos</a>
+              <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
+                <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+                  <div>
+                    <ul class="uk-nav uk-navbar-dropdown-nav listado-generos">
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                      <li class="uk-nav-divider"></li>
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul class="uk-nav uk-navbar-dropdown-nav listado-generos">
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                      <li class="uk-nav-divider"></li>
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="uk-navbar-item">
+            <div><a href="BuscadorAvanzado.html">BUSCADOR AVANZADO</a></div>
+          </div>
+          <div class="buscador">
+          <div class="uk-navbar-item">
+            <form class="buscador" action="ResultadoDeBuscador.html" method="get">
+              <input class="uk-input uk-form-width-small" type="text" placeholder="Encontra la serie que buscas!">
+              <button class="uk-button uk-button-default"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
