@@ -1,4 +1,5 @@
 *{box-sizing: border-box;}
+
 /* Header */
 
 header nav{
@@ -68,6 +69,32 @@ nav ul.header-right button{
   border: none;
 }
 
+/* BODY */
+body{
+  margin-left: 0;
+  padding: 0;
+}
+body main{
+  font-family: 'Poiret One', cursive;
+  margin-left: 2%;
+}
+
+form select{
+  margin: 6px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+form label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input{
+  margin: 6px;
+  display: block;
+    margin-bottom: 10px;
+}
 /* FOOTER */
 
 footer{
