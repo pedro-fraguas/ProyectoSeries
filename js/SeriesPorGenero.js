@@ -3,6 +3,40 @@ window.onload = function(){
   var imagenes;
   var hipervinculos;
 
+  fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      var generos = data.genres;
+      var listado = document.querySelectorAll("ul.listado-generos li a");
+
+      for (var i = 0; i < listado.length; i++) {
+        listado[i].innerHTML = generos[i].name;
+        listado[i].href = "SeriesPorGenero.html?idGenero=" + generos[i].id;
+      }
+    })
+    .catch(function(error) {
+      alert("Error");
+    })
+
+  fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      var listado = data.genres;
+      for (var i = 0; i < listado.length; i++) {
+        if (listado[i].id == generoID) {
+          document.querySelector("h3.genero").innerHTML = listado[i].name;
+          break;
+        }
+      }
+    })
+    .catch(function(error) {
+      alert("Error");
+    })
+
   fetch("https://api.themoviedb.org/3/discover/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&with_genres=" + generoID + "&include_null_first_air_dates=false")
     .then(function(response) {
       return response.json();
