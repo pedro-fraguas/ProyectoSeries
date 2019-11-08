@@ -27,6 +27,11 @@ nav div div.buscador{
   right: 0;
 }
 
+nav.uk-navbar-container.uk-margin.uk-navbar{
+  background-color: rgb(129, 133, 138);
+}
+
+
 nav div div.buscador input{
   width: 200px;
 }

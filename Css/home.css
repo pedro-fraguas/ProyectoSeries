@@ -22,6 +22,10 @@ header nav div a img{
   padding-left: 0;
 }
 
+header nav div a{
+  color: white;
+}
+
 nav div div.buscador{
   position: absolute;
   right: 0;
@@ -29,6 +33,18 @@ nav div div.buscador{
 
 nav div div.buscador input{
   width: 200px;
+}
+
+nav.uk-navbar-container.uk-margin.uk-navbar div li a{
+  color: white;
+}
+
+nav.uk-navbar-container.uk-margin.uk-navbar div ul li a.listagenero{
+  color: gray;
+
+}
+nav.uk-navbar-container.uk-margin.uk-navbar{
+  background-color: rgb(129, 133, 138);
 }
 
 /* BODY UIKIT */
