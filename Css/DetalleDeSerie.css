@@ -6,6 +6,10 @@
   font-family: 'Poiret One', cursive;
   }
 
+
+
+
+
   /* body */
   body {
     background-color: white;
@@ -78,6 +82,40 @@
     margin-top: 20px;
     margin-bottom: 10px;
   }
+
+
+
+
+
+
+
+/* footer */
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 30px;
+    background-color: rgb(129, 133, 138);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  div.logoTMDB {
+    width: 7%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+  }
+
+  img.TMDB {
+    width: 100%;
+  }
+
+  div.nombres {
+    margin-left: 5%;
+    margin-bottom: 20px;
+  }
+
+
 
   /* Header */
 
