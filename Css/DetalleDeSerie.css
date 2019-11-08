@@ -3,14 +3,10 @@
   margin: 0;
   padding: 0;
   color: black;
-  font-family: 'Poiret One', cursive;
-  }
-
-
-
-
+  font-family: 'Poiret One', cursive;}
 
   /* body */
+
   body {
     background-color: white;
   }
@@ -83,134 +79,64 @@
     margin-bottom: 10px;
   }
 
-
-
-
-
-
-
 /* footer */
 
-  footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    padding-top: 30px;
-    background-color: rgb(129, 133, 138);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-  }
-  div.logoTMDB {
-    width: 7%;
+footer{
+  font-family: 'Poiret One', cursive;
+  background-color: rgb(129, 133, 138);
+  margin-top: 20px;
+  padding: 1px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 0;
+}
+
+footer div.footer-izq{
+  width: 40%;
+  margin-left: 5%;
+}
+
+footer div.footer-der{
+    width: 40%;
     margin-right: 5%;
-    margin-bottom: 20px;
-  }
+}
 
-  img.TMDB {
-    width: 100%;
-  }
+footer div.footer-izq a{
+  text-decoration: none;
+  color: white;
+}
 
-  div.nombres {
-    margin-left: 5%;
-    margin-bottom: 20px;
-  }
-
-
+footer div.footer-der p.abajo{
+  margin-bottom: 0;
+}
 
   /* Header */
 
-  header nav{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 70px;
-    background-color: rgb(129, 133, 138);
-    padding: 0;
-    margin: 0;
+  body{
+    margin-top: 0;
   }
 
-  nav ul.header-left{
-    width: 50%;
-      display: flex;
-      align-items: center;
-      list-style: none;
-      padding-left: 0;
-      margin-left: 0;
+  body main{
+    margin-left: 2%;
+    margin-right: 2%;
   }
 
-  nav ul.header-left li.menu{
-
-    width: 10%;
-    margin-left: 7%;
-    margin-right: 0;
-    padding: 0;
+  header nav div a{
+    color: #999;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   }
-  nav ul.header-left li a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Poiret One', cursive;
-    border-left: solid black 1px;
-    padding-left: 20%;
-  }
-  nav ul.header-left li a.generos{
-    margin-left: 5%;
-  }
-  nav ul li.logo{
-    margin-left: 5%;
-  }
-  nav ul li.logo img{
+  header nav div a img{
     width: 58px;
     padding-left: 0;
   }
 
-  nav ul.header-right{
-    width: 50%;
-    display: flex;
-    list-style: none;
-    align-items: center;
-    padding-left: 25%;
+  nav div div.buscador{
+    position: absolute;
+    right: 0;
   }
 
-  nav ul.header-right i{
-    margin-left: 5%;
-    size: 20%;
-
-  }
-
-  nav ul.header-right li{
-  visibility: visible;
-  }
-
-  nav ul.header-right button{
-    background-color: rgb(129, 133, 138);
-    border: none;
-  }
-
-  /* FOOTER */
-
-  footer{
-    font-family: 'Poiret One', cursive;
-    background-color: rgb(129, 133, 138);
-    margin-top: 20px;
-    padding: 1px;
-    height: 200px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 50px;
-  }
-
-  footer div.footer-izq{
-    width: 40%;
-    margin-left: 5%;
-  }
-
-  footer div.footer-der{
-      width: 40%;
-      margin-right: 5%;
-  }
-
-  footer div.footer-izq a{
-    text-decoration: none;
-    color: white;
+  nav div div.buscador input{
+    width: 200px;
   }

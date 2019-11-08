@@ -1,71 +1,31 @@
 *{box-sizing: border-box;}
 /* Header */
 
-header nav{
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  height: 70px;
-  background-color: rgb(129, 133, 138);
-  padding: 0;
-  margin: 0;
+body{
+  margin-top: 0;
 }
 
-nav ul.header-left{
-  width: 50%;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding-left: 0;
-    margin-left: 0;
+body main{
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
-nav ul.header-left li.menu{
-
-  width: 10%;
-  margin-left: 7%;
-  margin-right: 0;
-  padding: 0;
+header nav div a{
+  color: #999;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
-nav ul.header-left li a{
-  text-decoration: none;
-  color: white;
-  font-family: 'Poiret One', cursive;
-  border-left: solid black 1px;
-  padding-left: 20%;
-}
-nav ul.header-left li a.generos{
-  margin-left: 5%;
-}
-nav ul li.logo{
-  margin-left: 5%;
-}
-nav ul li.logo img{
+header nav div a img{
   width: 58px;
   padding-left: 0;
 }
 
-nav ul.header-right{
-  width: 50%;
-  display: flex;
-  list-style: none;
-  align-items: center;
-  padding-left: 25%;
+nav div div.buscador{
+  position: absolute;
+  right: 0;
 }
 
-nav ul.header-right i{
-  margin-left: 5%;
-  size: 20%;
-
-}
-
-nav ul.header-right li{
-visibility: visible;
-}
-
-nav ul.header-right button{
-  background-color: rgb(129, 133, 138);
-  border: none;
+nav div div.buscador input{
+  width: 200px;
 }
 
 /* BODY */
