@@ -34,7 +34,7 @@ window.onload = function() {
       cargarSeries(series);
     })
     .catch(function(error) {
-      alert("Error, perdon, vuelva mas tarde")
+      alert("Eror")
     })
 
   function cargarSeries(series) {
