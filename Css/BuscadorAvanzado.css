@@ -3,6 +3,9 @@
 /* Header */
 body{
   margin-top: 0;
+  background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-037.jpg");
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 body main{

@@ -8,7 +8,9 @@
   /* body */
 
   body {
-    background-color: white;
+    background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-037.jpg");
+    background-repeat: repeat;
+    background-size: cover;
   }
 
   main {
@@ -18,6 +20,7 @@
 
   div.infoPrincipal {
     display: flex;
+
   }
 
   img.poster {
@@ -62,6 +65,9 @@
 
   div.tituloDatos {
     width: 100%;
+    background-color:#f8f8f8;
+    margin-left: 1%;
+    border-radius: 10px;
   }
 
   div.carrousel {
