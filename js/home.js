@@ -13,6 +13,9 @@ window.onload = function() {
         listado[i].href = "SeriesPorGenero.html?idGenero=" + generos[i].id;
       }
     })
+    .catch(function(error) {
+      alert("Error");
+    })
 
   fetch("https://api.themoviedb.org/3/tv/popular?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&page=1")
     .then(function(response) {
