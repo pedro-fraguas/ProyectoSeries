@@ -62,9 +62,20 @@ window.onload = function() {
       alert("Error");
     })
 
-    // var trailer = document.querySelector("div.trailer");
-    // if (trailer != null) {
-    //   trailer.innerHTML = "<iframe src='" +  + "' width='' height=''></iframe>"
-    // }
+    fetch("https://api.themoviedb.org/3/tv/" + serieID + "/videos?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
+      .then(function(response){
+        return response.json();
+      })
+      .then(function(data){
+        for (var i = 0; i < data.results.length; i++) {
+          if (data.results[i].type == "Trailer") {
+            var video = document.querySelector("div.trailer");
+            video.innerHTML = "<iframe src='https://www.youtube.com/watch?v=" + data.results[i].key + "' width='' height=''></iframe>"
+          }
+        }
+      })
+      .catch(function(error){
+        alert("Error");
+      })
 
 }
