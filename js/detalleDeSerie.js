@@ -2,6 +2,7 @@ window.onload = function() {
 
   var serieID = new URLSearchParams(location.search).get('idSerie');
 
+  //Esto carga los generos al nav bar
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
     .then(function(response) {
       return response.json();
@@ -19,6 +20,7 @@ window.onload = function() {
       alert("Error");
     })
 
+  //Esto carga el poster y los datos de la serie
   fetch("https://api.themoviedb.org/3/tv/" + serieID + "?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
     .then(function(response) {
       return response.json();
@@ -40,6 +42,7 @@ window.onload = function() {
       alert("Error");
     })
 
+  //Esto carga las series relacionadas
   fetch("https://api.themoviedb.org/3/tv/" + serieID + "/similar?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&page=1")
     .then(function(response){
       return response.json();

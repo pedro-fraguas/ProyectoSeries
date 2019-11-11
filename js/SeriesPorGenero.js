@@ -3,6 +3,7 @@ window.onload = function(){
   var imagenes;
   var hipervinculos;
 
+  //Esto carga los generos al nav bar
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
     .then(function(response) {
       return response.json();
@@ -20,6 +21,7 @@ window.onload = function(){
       alert("Error");
     })
 
+  //Esto carga el titulo del genero al h3
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
     .then(function(response) {
       return response.json();
@@ -37,6 +39,7 @@ window.onload = function(){
       alert("Error");
     })
 
+  //Esto carga los posters a los resultados
   fetch("https://api.themoviedb.org/3/discover/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&with_genres=" + generoID + "&include_null_first_air_dates=false")
     .then(function(response) {
       return response.json();
