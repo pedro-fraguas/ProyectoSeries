@@ -6,6 +6,7 @@ window.onload = function() {
   var contador = 1;
   var totalDeSeries;
 
+  //Esto carga los generos al nav bar
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
     .then(function(response) {
       return response.json();
@@ -23,6 +24,7 @@ window.onload = function() {
       alert("Error");
     })
 
+  //Esto carga la primer tanda de resultados
   fetch("https://api.themoviedb.org/3/search/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&query=" + loBuscado + "&page=1")
     .then(function(response) {
       return response.json();
@@ -59,6 +61,7 @@ window.onload = function() {
   //   }
   // }
 
+  //Scroll infinito
   var verMas = document.querySelector("main button");
   verMas.onclick = function() {
     var resultados = document.querySelector("div.resultados");
@@ -90,6 +93,14 @@ window.onload = function() {
         alert("Error");
       })
   }
+
+  // function agregarPoster(imagen, poster) {
+  //   if (poster == null) {
+  //
+  //   } else {
+  //     imagen = poster;
+  //   }
+  // }
 
   // var barraBuscador = document.querySelector("header form.buscador input");
   // barraBuscador.onsubmit = function() {

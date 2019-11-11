@@ -1,5 +1,6 @@
 window.onload = function() {
 
+  //Esto carga los generos en el nav bar
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
     .then(function(response) {
       return response.json();
@@ -17,6 +18,7 @@ window.onload = function() {
       alert("Error");
     })
 
+  //Esto carga las series populares al carrousel
   fetch("https://api.themoviedb.org/3/tv/popular?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&page=1")
     .then(function(response) {
       return response.json();
@@ -36,6 +38,7 @@ window.onload = function() {
       alert("Error");
     })
 
+  //Esto carga las series mejor puntuadas al carrousel
   fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&page=1")
     .then(function(response) {
       return response.json();
@@ -55,6 +58,7 @@ window.onload = function() {
       alert("Error");
     })
 
+  //Esto carga las series al aire al carrousel
   fetch("https://api.themoviedb.org/3/tv/on_the_air?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&page=1")
     .then(function(response) {
       return response.json();
