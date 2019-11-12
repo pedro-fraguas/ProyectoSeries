@@ -57,7 +57,9 @@ window.onload = function(){
     hipervinculos = document.querySelectorAll(".serieBuscada a");
 
     for (var i = 0; i < imagenes.length; i++) {
-      imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+      if (series[i].poster_path != null) {
+        imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+      }
       hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
     }
   }

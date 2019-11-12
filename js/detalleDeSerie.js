@@ -26,7 +26,11 @@ window.onload = function() {
       return response.json();
     })
     .then(function(serie) {
-      document.querySelector(".poster").src = "https://image.tmdb.org/t/p/original" + serie.poster_path;
+
+      if (serie.poster_path != null) {
+        document.querySelector(".poster").src = "https://image.tmdb.org/t/p/original" + serie.poster_path;
+      }
+
       document.querySelector(".tituloPelicula").innerHTML = serie.name;
       document.querySelector(".tituloDatos p.overview").innerHTML = serie.overview;
       document.querySelector(".tituloDatos h4.lenguajeOriginal").innerHTML += serie.original_language;
@@ -54,7 +58,9 @@ window.onload = function() {
       var hipervinculos = document.querySelectorAll(".relacionadas .uk-slider-items li a");
 
       for (var i = 0; i < imagenes.length; i++) {
-        imagenes[i].src = "https://image.tmdb.org/t/p/original" + relacionadas[i].poster_path;
+        if (relacionadas[i].poster_path != null) {
+          imagenes[i].src = "https://image.tmdb.org/t/p/original" + relacionadas[i].poster_path;
+        }
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + relacionadas[i].id;
       }
     })
@@ -62,6 +68,7 @@ window.onload = function() {
       alert("Error");
     })
 
+    //Esto deberia cargar el trailer
     fetch("https://api.themoviedb.org/3/tv/" + serieID + "/videos?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
       .then(function(response){
         return response.json();

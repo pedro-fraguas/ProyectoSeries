@@ -30,7 +30,9 @@ window.onload = function() {
       var hipervinculos = document.querySelectorAll(".populares .uk-slider-items li a");
 
       for (var i = 0; i < imagenes.length; i++) {
-        imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+        if (series[i].poster_path != null) {
+          imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+        }
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }
     })
@@ -50,7 +52,9 @@ window.onload = function() {
       var hipervinculos = document.querySelectorAll(".puntaje .uk-slider-items li a");
 
       for (var i = 0; i < imagenes.length; i++) {
-        imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+        if (series[i].poster_path != null) {
+          imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+        }
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }
     })
@@ -70,7 +74,9 @@ window.onload = function() {
       var hipervinculos = document.querySelectorAll(".al-aire .uk-slider-items li a");
 
       for (var i = 0; i < imagenes.length; i++) {
-        imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+        if (series[i].poster_path != null) {
+          imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+        }
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }
     })
