@@ -85,4 +85,11 @@ window.onload = function() {
         alert("Error");
       })
 
+    //Esto muestra series relacionadas
+    boton = document.querySelector("main button");
+    boton.onclick = function() {
+      boton.style.display = "none";
+      document.querySelector("div.relacionadas").style.display = "block";
+    }
+
 }

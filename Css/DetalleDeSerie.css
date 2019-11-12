@@ -85,6 +85,16 @@
     margin-bottom: 10px;
   }
 
+/* series relacionadas */
+
+  main button{
+    
+  }
+
+  div.relacionadas{
+    display: none;
+  }
+
 /* footer */
 
 footer{
