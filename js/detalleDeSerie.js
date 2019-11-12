@@ -86,10 +86,37 @@ window.onload = function() {
       })
 
     //Esto muestra series relacionadas
-    boton = document.querySelector("main button");
+    boton = document.querySelector("main button.series-relacionadas");
     boton.onclick = function() {
       boton.style.display = "none";
       document.querySelector("div.relacionadas").style.display = "block";
     }
 
+    //Series favoritas
+    var recuperoStorage = localStorage.getItem("seriesFavoritas");
+
+    if (recuperoStorage == null) {
+      seriesFavoritas = [];
+    } else {
+      seriesFavoritas = JSON.parse(recuperoStorage);
+    }
+
+    if (seriesFavoritas.includes(serieID)) {
+      document.querySelector("button.favorito").innerHTML = "QUITAR DE FAVORITOS";
+    }
+
+    document.querySelector("button.favorito").onclick = function() {
+      if (seriesFavoritas.includes(serieID)) {
+        var index = seriesFavoritas.indexOf(serieID);
+        seriesFavoritas.splice(index, 1);
+        document.querySelector("button.favorito").innerHTML = "AGREGAR FAVORITO";
+      } else {
+        seriesFavoritas.push(serieID);
+        document.querySelector("button.favorito").innerHTML = "QUITAR DE FAVORITOS";
+      }
+
+      var infoParaStorage = JSON.stringify(seriesFavoritas);
+      localStorage.setItem("seriesFavoritas", infoParaStorage);
+      console.log(localStorage);
+    }
 }
