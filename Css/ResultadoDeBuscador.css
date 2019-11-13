@@ -61,6 +61,9 @@ nav div div.buscador input{
   width: 200px;
 }
 
+button.uk-button-default{
+  border: none;
+}
 /* BODY */
 
 main{

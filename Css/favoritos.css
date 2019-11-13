@@ -1,6 +1,5 @@
 *{box-sizing: border-box;}
 /* Header */
-
 body{
   margin-top: 0;
   background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-037.jpg");
@@ -22,8 +21,12 @@ header nav div a img{
   padding-left: 0;
 }
 
-nav.uk-navbar-container.uk-margin.uk-navbar{
-  background-color: rgb(129, 133, 138);
+header nav div a{
+color: white;
+}
+
+header nav div ul.uk-nav uk-navbar-dropdown-nav listado-generos{
+  color: black;
 }
 
 nav div div.buscador{
@@ -35,60 +38,44 @@ nav div div.buscador input{
   width: 200px;
 }
 
+nav.uk-navbar-container.uk-margin.uk-navbar div li a{
+  color: white;
+}
+
+nav.uk-navbar-container.uk-margin.uk-navbar div ul li a.listagenero{
+  color: gray;
+
+}
+nav.uk-navbar-container.uk-margin.uk-navbar{
+  background-color: rgb(129, 133, 138);
+}
+
 button.uk-button-default{
   border: none;
 }
 
 /* BODY */
 
-main{
-  font-family: 'Poiret One', cursive;
+article.serie-favorita{
+  width: 20%;
+  margin-right: 3%;
 }
 
-main section.series div.resultados{
+section.series{
   display: flex;
   flex-wrap: wrap;
 }
 
-main article.serieBuscada {
-  width: 18%;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-main article.serieBuscada img{
-  width: 100%;
-  transition: .3s;
-}
-
-main article.serieBuscada p{
-  opacity: 0;
-  transition: .3s;
-}
-
-main article.serieBuscada img:hover{
-  opacity: 0.5;
-}
-
-main article.serieBuscada:hover p{
-  opacity: 1;
-}
-
-main button{
-  visibility: visible;
-}
-
 /* FOOTER */
-
 footer{
   font-family: 'Poiret One', cursive;
   background-color: rgb(129, 133, 138);
   margin-top: 20px;
   padding: 1px;
-  height: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  height: 200px;
 }
 
 footer div.footer-izq{

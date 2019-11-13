@@ -5,6 +5,16 @@
   color: black;
   font-family: 'Poiret One', cursive;}
 
+  /* Header */
+  header nav div a{
+    color: white;
+  }
+
+  button.uk-button-default{
+    border: none;
+  }
+
+
   /* body */
 
   body {
@@ -85,10 +95,16 @@
     margin-bottom: 10px;
   }
 
+  button.favorito{
+    background-color: white;
+    border: none;
+    margin-left: 2%;
+  }
+
 /* series relacionadas */
 
   main button{
-    
+
   }
 
   div.relacionadas{
