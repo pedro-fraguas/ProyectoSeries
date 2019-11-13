@@ -28,10 +28,13 @@ window.onload = function() {
 
       var imagenes = document.querySelectorAll(".populares .uk-slider-items li img");
       var hipervinculos = document.querySelectorAll(".populares .uk-slider-items li a");
+      var titulos = document.querySelectorAll(".populares .uk-slider-items li");
 
       for (var i = 0; i < imagenes.length; i++) {
         if (series[i].poster_path != null) {
           imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+        } else {
+          titulos[i].innerHTML += "<div class='uk-position-center uk-panel'><h1>" + series[i].name + "</h1></div>"
         }
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }
@@ -50,10 +53,13 @@ window.onload = function() {
 
       var imagenes = document.querySelectorAll(".puntaje .uk-slider-items li img");
       var hipervinculos = document.querySelectorAll(".puntaje .uk-slider-items li a");
+      var titulos = document.querySelectorAll(".puntaje .uk-slider-items li");
 
       for (var i = 0; i < imagenes.length; i++) {
         if (series[i].poster_path != null) {
           imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+        } else {
+          titulos[i].innerHTML += "<div class='uk-position-center uk-panel'><h1>" + series[i].name + "</h1></div>";
         }
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }
@@ -72,10 +78,13 @@ window.onload = function() {
 
       var imagenes = document.querySelectorAll(".al-aire .uk-slider-items li img");
       var hipervinculos = document.querySelectorAll(".al-aire .uk-slider-items li a");
+      var titulos = document.querySelectorAll(".al-aire .uk-slider-items li");
 
       for (var i = 0; i < imagenes.length; i++) {
         if (series[i].poster_path != null) {
           imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+        } else {
+          titulos[i].innerHTML += "<div class='uk-position-center uk-panel'><h1>" + series[i].name + "</h1></div>";
         }
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }

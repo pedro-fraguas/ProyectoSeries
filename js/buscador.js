@@ -34,6 +34,9 @@ window.onload = function() {
       series = data.results;
       document.querySelector("h1").innerHTML = "Esto encontramos para tu busqueda de '" + loBuscado + "':"
       cargarSeries(series);
+      if (imagenes.length >= totalDeSeries) {
+        verMas.style.visibility = "hidden";
+      }
     })
     .catch(function(error) {
       alert("Eror")
@@ -42,26 +45,19 @@ window.onload = function() {
   function cargarSeries(series) {
     imagenes = document.querySelectorAll(".serieBuscada a img");
     var hipervinculos = document.querySelectorAll(".serieBuscada a");
+    var titulos = document.querySelectorAll("article.serieBuscada");
 
     for (var i = 0; i < imagenes.length; i++) {
       if (series[i].poster_path != null) {
         imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
+      } else {
+        //titulos[i].innerHTML += "<div class='uk-position-center uk-panel'><h1>" + series[i].name + "</h1></div>";
       }
       hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
     }
   }
 
   //se puede hacer el scroll infinito con un evento .onscroll
-
-  // var verMas = document.querySelector("main button");
-  // verMas.onclick = function() {
-  //   var resultados = document.querySelector("div.resultados");
-  //   resultados.innerHTML += "<article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='' alt=''></a></article>";
-  //   cargarSeries(series);
-  //   if (imagenes.length >= series.length) {
-  //     verMas.style.visibility = "hidden";
-  //   }
-  // }
 
   //Scroll infinito
   var verMas = document.querySelector("main button");
@@ -79,6 +75,7 @@ window.onload = function() {
   function cargarMasSeries(series) {
     imagenes = document.querySelectorAll(".serieBuscada a img");
     var hipervinculos = document.querySelectorAll(".serieBuscada a");
+    var titulos = document.querySelectorAll(".serieBuscada");
 
     fetch("https://api.themoviedb.org/3/search/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&query=" + loBuscado + "&page=" + contador)
       .then(function(response) {
@@ -89,6 +86,8 @@ window.onload = function() {
         for (var i = (contador - 1) * 20; i < imagenes.length; i++) {
           if (series[i - (contador - 1) * 20].poster_path != null) {
             imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i - (contador - 1) * 20].poster_path;
+          } else {
+            titulos[i].innerHTML += "<div class='uk-position-center uk-panel'><h1>" + series[i - (contador - 1) * 20].name + "</h1></div>";
           }
           hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i - (contador - 1) * 20].id;
         }
