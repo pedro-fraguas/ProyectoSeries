@@ -5,6 +5,12 @@
   color: black;
   font-family: 'Poiret One', cursive;}
 
+  /* Header */
+  header nav div a{
+    color: white;
+  }
+
+
   /* body */
 
   body {
