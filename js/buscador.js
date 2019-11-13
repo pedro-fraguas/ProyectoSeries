@@ -87,7 +87,7 @@ window.onload = function() {
           if (series[i - (contador - 1) * 20].poster_path != null) {
             imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i - (contador - 1) * 20].poster_path;
           } else {
-            titulos[i].innerHTML += "<div class='uk-position-center uk-panel'><h1>" + series[i - (contador - 1) * 20].name + "</h1></div>";
+            //titulos[i].innerHTML += "<div class='uk-position-center uk-panel'><h1>" + series[i - (contador - 1) * 20].name + "</h1></div>";
           }
           hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i - (contador - 1) * 20].id;
         }
