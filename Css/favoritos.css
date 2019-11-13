@@ -50,6 +50,10 @@ nav.uk-navbar-container.uk-margin.uk-navbar{
   background-color: rgb(129, 133, 138);
 }
 
+button.uk-button-default{
+  border: none;
+}
+
 /* BODY */
 
 article.serie-favorita{
