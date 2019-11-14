@@ -42,4 +42,16 @@ window.onload = function() {
     .catch(function(error) {
       alert("Error");
     })
+
+  //Esto revisa las condiciones para ejecutar la busqueda
+  var buscador = document.querySelector("form.buscador");
+  var input = document.querySelector("form.buscador input");
+  buscador.onsubmit = function(event){
+    if (input.value == "") {
+      event.preventDefault();
+    } else if (input.value.length < 3) {
+      event.preventDefault();
+      alert("Debe haber un minimo de 3 letras para buscar");
+    }
+  }
 }

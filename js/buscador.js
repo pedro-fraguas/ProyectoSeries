@@ -97,14 +97,16 @@ window.onload = function() {
       })
   }
 
-  // var barraBuscador = document.querySelector("header form.buscador input");
-  // barraBuscador.onsubmit = function() {
-  //   if (this.value == "") {
-  //     event.preventDefault();
-  //   } else if (this.value.length < 3) {
-  //     event.preventDefault();
-  //     alert("La busqueda debe tener al menos 3 letras");
-  //   }
-  // }
+  //Esto revisa las condiciones para ejecutar la busqueda
+  var buscador = document.querySelector("form.buscador");
+  var input = document.querySelector("form.buscador input");
+  buscador.onsubmit = function(event){
+    if (input.value == "") {
+      event.preventDefault();
+    } else if (input.value.length < 3) {
+      event.preventDefault();
+      alert("Debe haber un minimo de 3 letras para buscar");
+    }
+  }
 
 }

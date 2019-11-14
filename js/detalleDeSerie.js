@@ -68,55 +68,67 @@ window.onload = function() {
       alert("Error");
     })
 
-    //Esto deberia cargar el trailer
-    fetch("https://api.themoviedb.org/3/tv/" + serieID + "/videos?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
-      .then(function(response){
-        return response.json();
-      })
-      .then(function(data){
-        for (var i = 0; i < data.results.length; i++) {
-          if (data.results[i].type == "Trailer") {
-            var video = document.querySelector("div.trailer");
-            video.innerHTML = "<iframe src='https://www.youtube.com/watch?v=" + data.results[i].key + "' width='' height=''></iframe>"
-          }
+  //Esto deberia cargar el trailer
+  fetch("https://api.themoviedb.org/3/tv/" + serieID + "/videos?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
+    .then(function(response){
+      return response.json();
+    })
+    .then(function(data){
+      for (var i = 0; i < data.results.length; i++) {
+        if (data.results[i].type == "Trailer") {
+          var video = document.querySelector("div.trailer");
+          video.innerHTML = "<iframe src='https://www.youtube.com/watch?v=" + data.results[i].key + "' width='' height=''></iframe>"
         }
-      })
-      .catch(function(error){
-        alert("Error");
-      })
+      }
+    })
+    .catch(function(error){
+      alert("Error");
+    })
 
-    //Esto muestra series relacionadas
-    boton = document.querySelector("main button.series-relacionadas");
-    boton.onclick = function() {
-      boton.style.display = "none";
-      document.querySelector("div.relacionadas").style.display = "block";
-    }
+  //Esto muestra series relacionadas
+  boton = document.querySelector("main button.series-relacionadas");
+  boton.onclick = function() {
+    boton.style.display = "none";
+    document.querySelector("div.relacionadas").style.display = "block";
+  }
 
-    //Series favoritas
-    var recuperoStorage = localStorage.getItem("seriesFavoritas");
+  //Series favoritas
+  var recuperoStorage = localStorage.getItem("seriesFavoritas");
 
-    if (recuperoStorage == null) {
-      seriesFavoritas = [];
-    } else {
-      seriesFavoritas = JSON.parse(recuperoStorage);
-    }
+  if (recuperoStorage == null) {
+    seriesFavoritas = [];
+  } else {
+    seriesFavoritas = JSON.parse(recuperoStorage);
+  }
 
+  if (seriesFavoritas.includes(serieID)) {
+    document.querySelector("button.favorito").innerHTML = "QUITAR DE FAVORITOS";
+  }
+
+  document.querySelector("button.favorito").onclick = function() {
     if (seriesFavoritas.includes(serieID)) {
+      var index = seriesFavoritas.indexOf(serieID);
+      seriesFavoritas.splice(index, 1);
+      document.querySelector("button.favorito").innerHTML = "AGREGAR FAVORITO";
+    } else {
+      seriesFavoritas.push(serieID);
       document.querySelector("button.favorito").innerHTML = "QUITAR DE FAVORITOS";
     }
 
-    document.querySelector("button.favorito").onclick = function() {
-      if (seriesFavoritas.includes(serieID)) {
-        var index = seriesFavoritas.indexOf(serieID);
-        seriesFavoritas.splice(index, 1);
-        document.querySelector("button.favorito").innerHTML = "AGREGAR FAVORITO";
-      } else {
-        seriesFavoritas.push(serieID);
-        document.querySelector("button.favorito").innerHTML = "QUITAR DE FAVORITOS";
-      }
+    var infoParaStorage = JSON.stringify(seriesFavoritas);
+    localStorage.setItem("seriesFavoritas", infoParaStorage);
+    console.log(localStorage);
+  }
 
-      var infoParaStorage = JSON.stringify(seriesFavoritas);
-      localStorage.setItem("seriesFavoritas", infoParaStorage);
-      console.log(localStorage);
+  //Esto revisa las condiciones para ejecutar la busqueda
+  var buscador = document.querySelector("form.buscador");
+  var input = document.querySelector("form.buscador input");
+  buscador.onsubmit = function(event){
+    if (input.value == "") {
+      event.preventDefault();
+    } else if (input.value.length < 3) {
+      event.preventDefault();
+      alert("Debe haber un minimo de 3 letras para buscar");
     }
+  }
 }
