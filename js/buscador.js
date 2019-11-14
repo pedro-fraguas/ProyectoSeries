@@ -37,6 +37,8 @@ window.onload = function() {
       if (imagenes.length >= totalDeSeries) {
         verMas.style.visibility = "hidden";
       }
+      var input = document.querySelector("form.buscador input");
+      input.value = loBuscado;
     })
     .catch(function(error) {
       alert("Eror")
@@ -47,13 +49,16 @@ window.onload = function() {
     var hipervinculos = document.querySelectorAll(".serieBuscada a");
     var titulos = document.querySelectorAll("article.serieBuscada");
 
-    for (var i = 0; i < imagenes.length; i++) {
+    for (var i = 0; i < series.length; i++) {
       if (series[i].poster_path != null) {
         imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
       } else {
         //titulos[i].innerHTML += "<div class='uk-position-center uk-panel'><h1>" + series[i].name + "</h1></div>";
       }
       hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
+    }
+    for (var i = series.length; i < imagenes.length; i++) {
+      imagenes[i].src = "";
     }
   }
 
@@ -83,7 +88,7 @@ window.onload = function() {
       })
       .then(function(data) {
         series = data.results;
-        for (var i = (contador - 1) * 20; i < imagenes.length; i++) {
+        for (var i = (contador - 1) * 20; i < (contador - 1) * 20 + series.length; i++) {
           if (series[i - (contador - 1) * 20].poster_path != null) {
             imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i - (contador - 1) * 20].poster_path;
           } else {
@@ -91,6 +96,10 @@ window.onload = function() {
           }
           hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i - (contador - 1) * 20].id;
         }
+        for (var i = (contador - 1) * 20 + series.length; i < imagenes.length; i++) {
+          imagenes[i].src = "";
+        }
+
       })
       .catch(function(error) {
         alert("Error");
