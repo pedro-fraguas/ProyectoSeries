@@ -9,6 +9,25 @@ window.onload = function(){
   var contador = 1;
   var totalDeSeries;
 
+  if (generoincluido != null) {
+    generoincluido = "&with_genres=" + generoincluido;
+  } else {
+    generoincluido = "";
+  }
+  if (generoexcluido != null) {
+    generoexcluido = "&without_genres=" + generoexcluido;
+  } else {
+    generoexcluido = "";
+  }
+  if (año != "") {
+    año = "&first_air_date_year=" + año;
+  }
+  if (mostrar != null) {
+    mostrar = "&sort_by=" + mostrar;
+  } else {
+    mostrar = "";
+  }
+
   //Esto revisa las condiciones para ejecutar la busqueda
   var buscador = document.querySelector("form.buscador");
   var input = document.querySelector("form.buscador input");
@@ -23,7 +42,7 @@ window.onload = function(){
 
   //Esto carga la primer tanda de resultados
 
-  fetch("https://api.themoviedb.org/3/discover/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&sort_by="+ mostrar +"&first_air_date_year="+ año +"&page=1&with_genres="+ generoincluido +"&without_genres="+ generoexcluido)
+  fetch("https://api.themoviedb.org/3/discover/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US" + mostrar + año + "&page=1" + generoincluido + generoexcluido)
     .then(function(response) {
       return response.json();
     })
@@ -76,8 +95,8 @@ window.onload = function(){
     var hipervinculos = document.querySelectorAll(".serieBuscada a");
     var titulos = document.querySelectorAll(".serieBuscada");
 
-    fetch("https://api.themoviedb.org/3/discover/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&sort_by="+ mostrar +"&first_air_date_year="+ año +"&page=" + contador + "&with_genres="+ generoincluido +"&without_genres="+ generoexcluido)
-      .then(function(response) {
+    fetch("https://api.themoviedb.org/3/discover/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US" + mostrar + año + "&page=" + contador + generoincluido + generoexcluido )
+      .then(function(response){
         return response.json();
       })
       .then(function(data) {
@@ -93,14 +112,13 @@ window.onload = function(){
         for (var i = (contador - 1) * 20 + series.length; i < imagenes.length; i++) {
           imagenes[i].src = "";
         }
-
       })
       .catch(function(error) {
         alert("Error");
       })
   }
 
-  // js header
+  // Esto carga los generos al nav bar
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
     .then(function(response) {
       return response.json();
