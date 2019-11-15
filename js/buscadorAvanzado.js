@@ -19,11 +19,13 @@ window.onload = function(){
     })
     .then(function(data) {
       var generos = data.genres;
-      var listado = document.querySelectorAll("select.generos option.genero");
+      // var listado = document.querySelectorAll("select.generos option.genero");
+      var listado = document.querySelectorAll("select.generos");
       var listado2 = document.querySelectorAll("select.generos2 option.genero2");
 
       for (var i = 0; i < listado.length ; i++) {
-        listado[i].innerHTML = generos[i].name;
+        // listado[i].innerHTML = generos[i].name;
+        listado[i].innerHTML = "<option value='" + /* ID */ + "'>" + /* NOMBREGENERO */ + "</option>";
         listado2[i].innerHTML= generos[i].name;
       }
     })

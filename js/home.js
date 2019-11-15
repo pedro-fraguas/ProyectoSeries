@@ -34,7 +34,7 @@ window.onload = function() {
         if (series[i].poster_path != null) {
           imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
         } else {
-          titulos[i].innerHTML += "<div class='uk-position-center uk-panel'><h1>" + series[i].name + "</h1></div>"
+          titulos[i].innerHTML += "<div class=''><h1>" + series[i].name + "</h1></div>"
         }
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }

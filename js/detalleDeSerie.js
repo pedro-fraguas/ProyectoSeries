@@ -77,7 +77,8 @@ window.onload = function() {
       for (var i = 0; i < data.results.length; i++) {
         if (data.results[i].type == "Trailer") {
           var video = document.querySelector("div.trailer");
-          video.innerHTML = "<iframe src='https://www.youtube.com/watch?v=" + data.results[i].key + "' width='' height=''></iframe>"
+          // video.innerHTML = "<iframe src='https://www.youtube.com/watch?v=" + data.results[i].key + "' width='' height=''></iframe>"
+        video.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
         }
       }
     })
