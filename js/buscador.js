@@ -41,7 +41,7 @@ window.onload = function() {
       input.value = loBuscado;
     })
     .catch(function(error) {
-      alert("Eror")
+      alert("Error")
     })
 
   function cargarSeries(series) {
