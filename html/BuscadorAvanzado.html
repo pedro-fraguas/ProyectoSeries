@@ -84,54 +84,22 @@
         <label for="">¿Qué género estás buscando?</label>
         <select class="generos" name="generoincluido">
           <option value="" disabled selected>Generos</option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
-          <option value="" class="genero"></option>
         </select>
         <label for="">¿Qué género queres excluir?</label>
         <select class="generos2" name="generoexcluido">
           <option value="" disabled selected>Generos</option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
-          <option value="" class="genero2"></option>
         </select>
         <label for="">¿Qué año de estreno buscas?</label>
         <input type="text" name="añoestreno" value="" placeholder="Año de estreno">
         <label for="">¿Cómo queres ver los resulltados?</label>
         <select name="ordenresultados">
           <option value="" disabled selected>Orden de resultados</option>
-          <option value="">vote_average.desc</option>
-          <option value="">vote_average.asc</option>
-          <option value="">first_air_date.desc</option>
-          <option value="">first_air_date.asc</option>
-          <option value="">popularity.desc</option>
-          <option value="">popularity.asc</option>
+          <option value="vote_average.desc">Por menor puntaje</option>
+          <option value="vote_average.asc">Por mayor puntaje</option>
+          <option value="first_air_date.desc">Mas viejo</option>
+          <option value="first_air_date.asc">Mas nuevo</option>
+          <option value="popularity.desc">Por menor popularidad</option>
+          <option value="popularity.asc">Por mayor popularidad</option>
         </select>
         <button type="submit" name="button" >Buscar!</button>
       </form>
