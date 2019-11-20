@@ -188,7 +188,47 @@ footer div.footer-der p.abajo{
 @media (max-width: 768px){
 
   img.poster{
-    width: 5%;
+    width: 50%;
   }
 
+  div.trailer{
+    margin-left: 15%;
+    justify-content: center;
+  }
+
+  button.series-relacionadas{
+    margin-left: 15%
+  }
+
+  footer{
+    width: 100%;
+  }
+
+  footer div.footer-izq{
+    width: 40%;
+    margin-left: 0;
+    padding-right: 0;
+  }
+  footer div.footer-izq p{
+    margin: 0;
+    width: 50%;
+    height: auto;
+    margin-top: 5%;
+  }
+
+  footer div.footer-der{
+      width: 40%;
+      margin-right: 0;
+      padding-right: 0;
+  }
+  footer div.footer-der p.nombre{
+    visibility: hidden;
+  }
+  footer div.footer-der p.abajo{
+    visibility: hidden;
+  }
+
+  footer div.footer-der p.logo{
+    margin-top: 20%;
+  }
 }

@@ -41,6 +41,11 @@ button.uk-button-default{
 
 /* BODY UIKIT */
 
+  main{
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
 /* FOOTER */
 
 footer{
