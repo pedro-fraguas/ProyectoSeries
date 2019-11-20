@@ -9,6 +9,15 @@ window.onload = function(){
   var contador = 1;
   var totalDeSeries;
 
+  if (generoincluido == null && generoexcluido == null) {
+    alert("Se debe completar al menos un campo");
+    location.href = "../html/BuscadorAvanzado.html";
+  } else if (generoincluido != null && generoexcluido != null) {
+    alert("Podes incluir una serie o excluir una, no podes hacer ambas!")
+    location.href = "../html/BuscadorAvanzado.html";
+  }
+
+
   if (generoincluido != null) {
     generoincluido = "&with_genres=" + generoincluido;
   } else {
