@@ -56,6 +56,10 @@ button.uk-button-default{
   border: none;
 }
 
+button.mostrar-buscador{
+  display: none;
+}
+
 /* BODY */
 
 article.serie-favorita{
@@ -94,4 +98,20 @@ footer div.footer-der{
 footer div.footer-izq a{
   text-decoration: none;
   color: white;
+}
+
+@media (max-width: 640px) {
+  article.serie-favorita{
+    width: 30%;
+    margin: 1% auto;
+  }
+
+  button.mostrar-buscador{
+    display: block;
+  }
+
+  form.buscador{
+    display: none;
+  }
+
 }

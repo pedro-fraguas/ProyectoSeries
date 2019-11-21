@@ -1,5 +1,7 @@
 window.onload = function() {
 
+  //Esto recupera la info de las series favoritas guardadas
+
   var recuperoStorage = localStorage.getItem("seriesFavoritas");
 
   if (recuperoStorage == null) {
@@ -54,4 +56,24 @@ window.onload = function() {
       alert("Debe haber un minimo de 3 letras para buscar");
     }
   }
+
+
+  //Esto muestra el buscador en el responsive
+  var boton = document.querySelector("button.mostrar-buscador");
+  boton.onclick = function() {
+    document.querySelector("button.mostrar-buscador").style.display = "none";
+    document.querySelector("form.buscador").style.display = "block";
+    document.querySelector("div.ocultar").style.visibility = "hidden";
+    document.querySelector("ul.esconder").style.visibility = "hidden";
+  }
+
+  var ventana = document.querySelector("main")
+  ventana.onclick = function(){
+    document.querySelector("button.mostrar-buscador").style.display = "inline-block";
+    document.querySelector("form.buscador").style.display = "none";
+    document.querySelector("div.ocultar").style.visibility = "visible";
+    document.querySelector("ul.esconder").style.visibility = "visible";
+  }
+
+
 }
