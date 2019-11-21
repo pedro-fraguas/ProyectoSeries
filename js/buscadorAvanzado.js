@@ -51,4 +51,17 @@ window.onload = function(){
       alert("Error");
     })
 
+  // var buscadorAvanzado = document.querySelector("form.buscador-avanzado");
+  // var incluido = document.querySelector("select.generos");
+  // var excluido = document.querySelector("select.generos2");
+  // buscadorAvanzado.onsubmit = function(event) {
+  //   if (incluido == null && excluido == null) {
+  //     event.preventDefault();
+  //     alert("Se debe completar al menos un campo");
+  //   } else if (incluido.value != null && excluido.value != null) {
+  //     event.preventDefault();
+  //     alert("Podes incluir una serie o excluir una, no podes hacer ambas!")
+  //   }
+  // }
+
 }

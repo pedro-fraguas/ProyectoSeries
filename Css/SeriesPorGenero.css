@@ -56,6 +56,12 @@ main article.serieBuscada {
   margin: 0 auto;
 }
 
+@media (max-width: 800px) {
+  main article.serieBuscada{
+    width: 30%;
+  }
+}
+
 main article.serieBuscada img{
   width: 100%;
   transition: .3s;

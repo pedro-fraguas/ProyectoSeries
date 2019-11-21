@@ -9,6 +9,15 @@ window.onload = function(){
   var contador = 1;
   var totalDeSeries;
 
+  if (generoincluido == null && generoexcluido == null && año == "" && mostrar == null) {
+    alert("Se debe completar al menos un campo");
+    location.href = "../html/BuscadorAvanzado.html";
+  } else if (generoincluido != null && generoexcluido != null) {
+    alert("Podes incluir una serie o excluir una, no podes hacer ambas!")
+    location.href = "../html/BuscadorAvanzado.html";
+  }
+
+
   if (generoincluido != null) {
     generoincluido = "&with_genres=" + generoincluido;
   } else {
@@ -53,9 +62,6 @@ window.onload = function(){
       if (imagenes.length >= totalDeSeries) {
         verMas.style.visibility = "hidden";
       }
-    })
-    .catch(function(error) {
-      alert("Error");
     })
 
   function cargarSeries(series) {
@@ -113,9 +119,6 @@ window.onload = function(){
           imagenes[i].src = "";
         }
       })
-      .catch(function(error) {
-        alert("Error");
-      })
   }
 
   // Esto carga los generos al nav bar
@@ -131,8 +134,5 @@ window.onload = function(){
         listado[i].innerHTML = generos[i].name;
         listado[i].href = "SeriesPorGenero.html?idGenero=" + generos[i].id;
       }
-    })
-    .catch(function(error) {
-      alert("Error");
     })
 }
