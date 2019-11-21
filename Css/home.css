@@ -39,11 +39,49 @@ button.uk-button-default{
   border: none;
 }
 
+@media (max-width: 500px){
+  footer{
+      width: 100%;
+    }
+
+  footer div.footer-izq{
+      width: 40%;
+      margin-left: 0;
+      padding-right: 0;
+    }
+  footer div.footer-izq p{
+      margin: 0;
+      width: 50%;
+      height: auto;
+      margin-top: 5%;
+    }
+
+  footer div.footer-der{
+        width: 40%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+  footer div.footer-der p.nombre{
+      visibility: hidden;
+    }
+  footer div.footer-der p.abajo{
+      visibility: hidden;
+    }
+
+  footer div.footer-der p.logo{
+      margin-top: 20%;
+    }
+}
 /* BODY UIKIT */
 
   main{
     margin-left: 2%;
     margin-right: 2%;
+  }
+
+  main h3.division{
+    margin-top: 2%;
+
   }
 
 /* FOOTER */

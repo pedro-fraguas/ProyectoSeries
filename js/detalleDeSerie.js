@@ -101,7 +101,7 @@ window.onload = function() {
   } else {
     seriesFavoritas = JSON.parse(recuperoStorage);
   }
-
+//includes sirve para//
   if (seriesFavoritas.includes(serieID)) {
     document.querySelector("button.favorito").innerHTML = "QUITAR DE FAVORITOS";
   }
