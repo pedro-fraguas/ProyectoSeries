@@ -56,11 +56,43 @@ main article.serieBuscada {
   margin: 0 auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   main article.serieBuscada{
     width: 30%;
+    }
+
+  footer{
+      width: 100%;
+    }
+
+  footer div.footer-izq{
+      width: 40%;
+      margin-left: 0;
+      padding-right: 0;
+    }
+  footer div.footer-izq p{
+      margin: 0;
+      width: 50%;
+      height: auto;
+      margin-top: 5%;
+    }
+
+  footer div.footer-der{
+        width: 40%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+  footer div.footer-der p.nombre{
+      visibility: hidden;
+    }
+  footer div.footer-der p.abajo{
+      visibility: hidden;
+    }
+
+  footer div.footer-der p.logo{
+      margin-top: 20%;
+    }
   }
-}
 
 main article.serieBuscada img{
   width: 100%;
