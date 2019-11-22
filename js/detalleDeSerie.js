@@ -95,17 +95,17 @@ window.onload = function() {
 
   //Series favoritas
   var recuperoStorage = localStorage.getItem("seriesFavoritas");
-
+//jason.parse convierte texto en codigo
   if (recuperoStorage == null) {
     seriesFavoritas = [];
   } else {
     seriesFavoritas = JSON.parse(recuperoStorage);
   }
-//includes sirve para//
+//includes sirve para saber si esta en el array
   if (seriesFavoritas.includes(serieID)) {
     document.querySelector("button.favorito").innerHTML = "QUITAR DE FAVORITOS";
   }
-
+//splice te retira el elemento del array y organiza los otros
   document.querySelector("button.favorito").onclick = function() {
     if (seriesFavoritas.includes(serieID)) {
       var index = seriesFavoritas.indexOf(serieID);
@@ -115,7 +115,7 @@ window.onload = function() {
       seriesFavoritas.push(serieID);
       document.querySelector("button.favorito").innerHTML = "QUITAR DE FAVORITOS";
     }
-
+//jason.stringify convierte a lenguage jason
     var infoParaStorage = JSON.stringify(seriesFavoritas);
     localStorage.setItem("seriesFavoritas", infoParaStorage);
     console.log(localStorage);
