@@ -20,9 +20,6 @@ window.onload = function() {
         listado[i].href = "SeriesPorGenero.html?idGenero=" + generos[i].id;
       }
     })
-    .catch(function(error) {
-      alert("Error");
-    })
 
   //Esto carga la primer tanda de resultados
   fetch("https://api.themoviedb.org/3/search/tv?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&query=" + loBuscado + "&page=1")
@@ -39,9 +36,6 @@ window.onload = function() {
       }
       var input = document.querySelector("form.buscador input");
       input.value = loBuscado;
-    })
-    .catch(function(error) {
-      alert("Error")
     })
 
   function cargarSeries(series) {
@@ -100,9 +94,6 @@ window.onload = function() {
           imagenes[i].src = "";
         }
 
-      })
-      .catch(function(error) {
-        alert("Error");
       })
   }
 

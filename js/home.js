@@ -14,9 +14,6 @@ window.onload = function() {
         listado[i].href = "SeriesPorGenero.html?idGenero=" + generos[i].id;
       }
     })
-    .catch(function(error) {
-      alert("Error");
-    })
 
   //Esto carga las series populares al carrousel
   fetch("https://api.themoviedb.org/3/tv/popular?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&page=1")
@@ -38,9 +35,6 @@ window.onload = function() {
         }
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }
-    })
-    .catch(function(error) {
-      alert("Error");
     })
 
   //Esto carga las series mejor puntuadas al carrousel
@@ -64,9 +58,6 @@ window.onload = function() {
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }
     })
-    .catch(function(error) {
-      alert("Error");
-    })
 
   //Esto carga las series al aire al carrousel
   fetch("https://api.themoviedb.org/3/tv/on_the_air?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&page=1")
@@ -88,9 +79,6 @@ window.onload = function() {
         }
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
       }
-    })
-    .catch(function(error) {
-      alert("Error");
     })
 
   //Esto revisa las condiciones para ejecutar la busqueda

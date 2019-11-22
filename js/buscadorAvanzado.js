@@ -31,9 +31,6 @@ window.onload = function(){
         listado2.innerHTML += "<option value='" + generos[i].id + "'>" + generos[i].name + "</option>";
       }
     })
-    .catch(function(error) {
-      alert("Error");
-    })
 
     // condiciones para el ano de busqueda
     var avanzado = document.querySelector("form.buscador-avanzado")
@@ -62,9 +59,6 @@ window.onload = function(){
         listado[i].href = "SeriesPorGenero.html?idGenero=" + generos[i].id;
       }
 
-    })
-    .catch(function(error) {
-      alert("Error");
     })
 
     //Esto muestra el buscador en el responsive

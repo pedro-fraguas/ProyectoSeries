@@ -16,9 +16,6 @@ window.onload = function() {
         listado[i].href = "SeriesPorGenero.html?idGenero=" + generos[i].id;
       }
     })
-    .catch(function(error) {
-      alert("Error");
-    })
 
   //Esto carga el poster y los datos de la serie
   fetch("https://api.themoviedb.org/3/tv/" + serieID + "?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
@@ -42,9 +39,6 @@ window.onload = function() {
       }
 
     })
-    .catch(function(error) {
-      alert("Error");
-    })
 
   //Esto carga las series relacionadas
   fetch("https://api.themoviedb.org/3/tv/" + serieID + "/similar?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US&page=1")
@@ -64,9 +58,6 @@ window.onload = function() {
         hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + relacionadas[i].id;
       }
     })
-    .catch(function(error){
-      alert("Error");
-    })
 
   //Esto deberia cargar el trailer
   fetch("https://api.themoviedb.org/3/tv/" + serieID + "/videos?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
@@ -81,9 +72,6 @@ window.onload = function() {
         video.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
         }
       }
-    })
-    .catch(function(error){
-      alert("Error");
     })
 
   //Esto muestra series relacionadas

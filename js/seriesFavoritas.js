@@ -22,9 +22,6 @@ window.onload = function() {
           document.querySelector("section.series").innerHTML += "<article class='serie-favorita'><a href='DetalleDeSerie.html?idSerie=" + data.id + "'><img src='../img/poster-default.png' alt=''></a></article>"
         }
       })
-      .catch(function(error) {
-        alert("Error");
-      })
   }
 
   //Esto carga los generos en el nav bar
@@ -40,9 +37,6 @@ window.onload = function() {
         listado[i].innerHTML = generos[i].name;
         listado[i].href = "SeriesPorGenero.html?idGenero=" + generos[i].id;
       }
-    })
-    .catch(function(error) {
-      alert("Error");
     })
 
   //Esto revisa las condiciones para ejecutar la busqueda
