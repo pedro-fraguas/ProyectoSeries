@@ -9,6 +9,9 @@ window.onload = function(){
   var contador = 1;
   var totalDeSeries;
 
+
+// Condicieones de rellenado de campos
+
   if (generoincluido == null && generoexcluido == null && año == "" && mostrar == null) {
     alert("Se debe completar al menos un campo");
     location.href = "../html/BuscadorAvanzado.html";
@@ -17,7 +20,7 @@ window.onload = function(){
     location.href = "../html/BuscadorAvanzado.html";
   }
 
-
+// Genera variables para completar el href
   if (generoincluido != null) {
     generoincluido = "&with_genres=" + generoincluido;
   } else {
@@ -37,7 +40,7 @@ window.onload = function(){
     mostrar = "";
   }
 
-  //Esto revisa las condiciones para ejecutar la busqueda
+  //Esto revisa las condiciones para ejecutar la busqueda del header
   var buscador = document.querySelector("form.buscador");
   var input = document.querySelector("form.buscador input");
   buscador.onsubmit = function(event){

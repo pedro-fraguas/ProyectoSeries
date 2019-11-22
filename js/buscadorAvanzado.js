@@ -14,6 +14,7 @@ window.onload = function(){
   }
 
 
+  // Rellena los selects con los generos de tmdb
 
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
     .then(function(response) {
@@ -34,11 +35,12 @@ window.onload = function(){
       alert("Error");
     })
 
+    // condiciones para el ano de busqueda
     var avanzado = document.querySelector("form.buscador-avanzado")
     var ano = document.querySelector("form.buscador-avanzado input.ano")
     avanzado.onsubmit = function(event){
 
-      if (ano.value.length != 4 || ano.value > 2023){
+      if (ano.value.length > 4 || ano.value > 2023){
         event.preventDefault();
         alert("Ingrese un año valido")
       }
