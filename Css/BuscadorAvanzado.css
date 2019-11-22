@@ -73,27 +73,8 @@ form input{
   display: block;
     margin-bottom: 10px;
 }
-button.uk-button-default{
-  border: none;
-}
 
-button.mostrar-buscador{
-  display: none;
-}
-@media (max-width: 640px){
-
-
-  button.mostrar-buscador{
-    display: block;
-  }
-
-<<<<<<< Updated upstream
-  form.buscador{
-    display: none;
-  }
-=======
-/*@media (max-width: 500px){
->>>>>>> Stashed changes
+@media (max-width: 500px){
   footer{
       width: 100%;
     }
@@ -125,7 +106,7 @@ button.mostrar-buscador{
   footer div.footer-der p.logo{
       margin-top: 20%;
     }
-}*/
+}
 /* FOOTER */
 
 footer{
