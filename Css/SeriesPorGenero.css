@@ -92,6 +92,10 @@ main article.serieBuscada {
   footer div.footer-der p.logo{
       margin-top: 20%;
     }
+
+  article.serieBuscada{
+      width: 47%;
+    }
   }
 
 main article.serieBuscada img{
