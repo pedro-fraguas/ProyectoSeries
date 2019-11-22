@@ -75,7 +75,7 @@ section.series{
 
 }
 /* FOOTER */
-@media (max-width: 640px) {
+@media (max-width: 680px) {
 
   button.mostrar-buscador{
     display: block;
@@ -84,46 +84,44 @@ section.series{
   form.buscador{
     display: none;
   }
-  main article.serieBuscada{
+
+  article.serie-favorita{
     width: 30%;
-    }
+  }
 
   footer{
       width: 100%;
-    }
+  }
 
   footer div.footer-izq{
       width: 40%;
       margin-left: 0;
       padding-right: 0;
-    }
+  }
   footer div.footer-izq p{
       margin: 0;
       width: 50%;
       height: auto;
       margin-top: 5%;
-    }
+  }
 
   footer div.footer-der{
         width: 40%;
         margin-right: 0;
         padding-right: 0;
-    }
+  }
   footer div.footer-der p.nombre{
       visibility: hidden;
-    }
+  }
   footer div.footer-der p.abajo{
       visibility: hidden;
-    }
+  }
 
   footer div.footer-der p.logo{
       margin-top: 20%;
-    }
-
-  article.serieBuscada{
-      width: 47%;
-    }
   }
+
+}
 
 main article.serieBuscada img{
   width: 100%;

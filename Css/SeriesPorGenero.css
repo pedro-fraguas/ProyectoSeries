@@ -62,7 +62,7 @@ button.uk-button-default{
 button.mostrar-buscador{
   display: none;
 }
-@media (max-width: 640px) {
+@media (max-width: 680px) {
 
   button.mostrar-buscador{
     display: block;
