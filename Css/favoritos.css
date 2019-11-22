@@ -75,15 +75,89 @@ section.series{
 
 }
 /* FOOTER */
+@media (max-width: 640px) {
+
+  button.mostrar-buscador{
+    display: block;
+  }
+
+  form.buscador{
+    display: none;
+  }
+  main article.serieBuscada{
+    width: 30%;
+    }
+
+  footer{
+      width: 100%;
+    }
+
+  footer div.footer-izq{
+      width: 40%;
+      margin-left: 0;
+      padding-right: 0;
+    }
+  footer div.footer-izq p{
+      margin: 0;
+      width: 50%;
+      height: auto;
+      margin-top: 5%;
+    }
+
+  footer div.footer-der{
+        width: 40%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+  footer div.footer-der p.nombre{
+      visibility: hidden;
+    }
+  footer div.footer-der p.abajo{
+      visibility: hidden;
+    }
+
+  footer div.footer-der p.logo{
+      margin-top: 20%;
+    }
+
+  article.serieBuscada{
+      width: 47%;
+    }
+  }
+
+main article.serieBuscada img{
+  width: 100%;
+  transition: .3s;
+}
+
+main article.serieBuscada p{
+  opacity: 0;
+  transition: .3s;
+}
+
+main article.serieBuscada img:hover{
+  opacity: 0.5;
+}
+
+main article.serieBuscada:hover p{
+  opacity: 1;
+}
+
+main button{
+  visibility: visible;
+}
+
+/* FOOTER */
+
 footer{
   font-family: 'Poiret One', cursive;
   background-color: rgb(129, 133, 138);
   margin-top: 20px;
   padding: 1px;
+  height: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: 200px;
 }
 
 footer div.footer-izq{
@@ -99,20 +173,4 @@ footer div.footer-der{
 footer div.footer-izq a{
   text-decoration: none;
   color: white;
-}
-
-
-@media (max-width: 640px) {
-
-  article.serie-favorita{
-    width: 30%;
-    margin: 1% auto;}
-    
-  button.mostrar-buscador{
-    display: block;
-  }
-
-  form.buscador{
-    display: none;
-  }
 }
