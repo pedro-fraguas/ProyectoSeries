@@ -38,8 +38,20 @@ nav.uk-navbar-container.uk-margin.uk-navbar{
 button.uk-button-default{
   border: none;
 }
+button.mostrar-buscador{
+  display: none;
+}
 
-@media (max-width: 500px){
+@media (max-width: 640px){
+
+  button.mostrar-buscador{
+    display: block;
+  }
+
+  form.buscador{
+    display: none;
+  }
+
   footer{
       width: 100%;
     }

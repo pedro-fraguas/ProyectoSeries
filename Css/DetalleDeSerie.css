@@ -183,10 +183,25 @@ footer div.footer-der p.abajo{
     width: 200px;
   }
 
+  button.uk-button-default{
+    border: none;
+  }
+
+  button.mostrar-buscador{
+    display: none;
+  }
   /* Responsive */
 
 @media (max-width: 768px){
 
+
+    button.mostrar-buscador{
+      display: block;
+    }
+
+    form.buscador{
+      display: none;
+    }
   img.poster{
     width: 50%;
   }

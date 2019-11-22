@@ -102,8 +102,23 @@ main article.serieBuscada:hover p{
 main button{
   visibility: visible;
 }
+button.uk-button-default{
+  border: none;
+}
 
+button.mostrar-buscador{
+  display: none;
+}
 @media (max-width: 500px){
+
+
+  button.mostrar-buscador{
+    display: block;
+  }
+
+  form.buscador{
+    display: none;
+  }
   footer{
       width: 100%;
     }

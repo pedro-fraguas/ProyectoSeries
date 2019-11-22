@@ -65,8 +65,23 @@ form input{
   display: block;
     margin-bottom: 10px;
 }
+button.uk-button-default{
+  border: none;
+}
 
-@media (max-width: 500px){
+button.mostrar-buscador{
+  display: none;
+}
+@media (max-width: 640px){
+
+
+  button.mostrar-buscador{
+    display: block;
+  }
+
+  form.buscador{
+    display: none;
+  }
   footer{
       width: 100%;
     }

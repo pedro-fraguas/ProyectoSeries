@@ -55,8 +55,22 @@ main article.serieBuscada {
   justify-content: space-between;
   margin: 0 auto;
 }
+button.uk-button-default{
+  border: none;
+}
 
-@media (max-width: 500px) {
+button.mostrar-buscador{
+  display: none;
+}
+@media (max-width: 640px) {
+
+  button.mostrar-buscador{
+    display: block;
+  }
+
+  form.buscador{
+    display: none;
+  }
   main article.serieBuscada{
     width: 30%;
     }
